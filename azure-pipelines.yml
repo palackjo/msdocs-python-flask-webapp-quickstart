@@ -47,6 +47,16 @@ stages:
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
 
+    - script: |
+        python -m pip install --upgrade pip
+        pip install setup
+        pip install -r requirements.txt
+        pip install --upgrade flask werkzeug
+        python -m unittest discover -s tests -p 'test.py'
+      workingDirectory: $(projectRoot)
+      displayName: 'Execute test case'
+
+
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
