@@ -59,6 +59,7 @@ stages:
     - task: PublishTestResults@2
       displayName: 'Publishing test results'
       inputs:
+        searchFolder: '$(System.DefaultWorkingDirectory)'
         testResultsFormat: 'JUnit'
         testResultsFiles: '**/TEST-results.xml'
 
