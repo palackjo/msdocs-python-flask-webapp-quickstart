@@ -80,6 +80,6 @@ stages:
               ConnectionType: 'AzureRM'
               azureSubscription: 'Azure-DevOps'
               appType: 'webAppLinux'
-              WebAppName: 'my-devops-app1-prod'
-              packageForLinux: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+              WebAppName: $(webAppName)
+              packageForLinux: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
               RuntimeStack: 'PYTHON|3.11'
