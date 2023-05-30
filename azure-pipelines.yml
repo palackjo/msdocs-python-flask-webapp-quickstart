@@ -61,7 +61,7 @@ stages:
       inputs:
         searchFolder: '$(System.DefaultWorkingDirectory)'
         testResultsFormat: 'JUnit'
-        testResultsFiles: '**/TEST-results.xml'
+        testResultsFiles: 'TEST-results.xml'
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
