@@ -57,7 +57,10 @@ stages:
       displayName: 'Execute test case'
     
     - task: PublishTestResult@2
-      testResultsFiles: '**/TEST-results.xml'
+      displayName: 'Publishing test results'
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: '**/TEST-results.xml'
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
