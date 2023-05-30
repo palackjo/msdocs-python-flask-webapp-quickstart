@@ -56,7 +56,7 @@ stages:
       workingDirectory: $(projectRoot)
       displayName: 'Execute test case'
     
-    - task: PublishTestResult@2
+    - task: PublishTestResults@2
       displayName: 'Publishing test results'
       inputs:
         testResultsFormat: 'JUnit'
