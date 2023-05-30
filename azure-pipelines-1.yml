@@ -81,5 +81,5 @@ stages:
               azureSubscription: 'Azure-DevOps'
               appType: 'webAppLinux'
               WebAppName: 'my-devops-app1-prod'
-              packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+              packageForLinux: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
               RuntimeStack: 'PYTHON|3.11'
