@@ -55,7 +55,9 @@ stages:
         python -m unittest discover -s tests -p 'test.py'
       workingDirectory: $(projectRoot)
       displayName: 'Execute test case'
-
+    
+    - task: PublishTestResult@2
+      testResultsFiles: '**/TEST-results.xml'
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
